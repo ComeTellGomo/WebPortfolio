@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    }
+    
+    body{
+        background: darkolivegreen;
+        color: beige;
+    }
+    
+    /* im styling the header */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    
+    /* styling my name */
+    .logo{
+        font-size: 25px;
+        color: beige;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    /* styling the link to the other pages in the navbar */
+    .navbar a {
+        font-size: 15px;
+        color: beige;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 28px;
+        transition: .3s;
+    }
+    
+    /* making the text chang color when hovring above it or if its active */
+    .navbar a:hover,
+    .navbar a.active{
+        color: brown;
+    }
+    
+    /* information displayed on the home page */
+    .home{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+    }
+    
+    /* making sure that paragraph doesnt overlap */
+    .home-content{
+        max-width: 600px;
+    }
+    
+    /* welcome text */
+    .home-content h1{
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    
+    /* information tech grad */
+    .home-content h3{
+        font-size: 22px;
+        font-weight: 600;
+        
+        color: brown;
+    }
+    
+    /* the paragraph */
+    .home-content p {
+        font-size: 16px;
+        margin: 20px 0 40px;
+    }
+    
+    /* the buttons lets talk and hire me */
+    .home-content .btn-box{
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height: 50px;
+        
+    }
+    
+    /* how the buttons are going to look (exterior) */
+    .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background: brown;
+        border: 2px solid brown;
+        border-radius: 8px;
+        font-size: 26px;
+        color: beige;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    /* how the buttons are going to look (interior) */
+    .btn-box a:nth-child(2){
+        background: transparent;
+        color: beige;
+    }
+    
+    .btn-box a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: goldenrod;
+        z-index: -1;
+        transition: .5s;
+    }
+    
+    .btn-box a:hover::before{
+        width: 100%;
+    
+    }
