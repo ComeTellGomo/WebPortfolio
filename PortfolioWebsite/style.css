@@ -62,20 +62,7 @@
         color: brown;
     }
     
-    /*  menu toggle button */
-    .menu-toggle {
-        
-        cursor: pointer;
-        font-size: 24px;
-        color: beige;
-        background: none;
-        border: none;
-    }
-
-    /* show menu when navbar has active class */
-        .navbar.active .menu {
-            display: flex;
-        }
+   
 
         
     
