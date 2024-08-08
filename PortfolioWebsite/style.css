@@ -8,6 +8,7 @@
     body{
         background: darkolivegreen;
         color: beige;
+        min-height: 100vh;
     }
     
     /* im styling the header */
@@ -31,6 +32,8 @@
         color: beige;
         text-decoration: none;
         font-weight: 600;
+        margin: 10px 0;
+        
     }
 
     .navbar{
@@ -38,32 +41,85 @@
         align-items: center;
         
     }
-
-    .navbar .menu {
+    nav ul {
+        width: 100%;
+        list-style: none;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
-        gap: 20px;
+    }
+    nav li{
+        height: 50px;
     }
     
     
     /* styling the link to the other pages in the navbar */
-    .navbar a {
+    nav a {
+        height: 100%;
         font-size: 15px;
+        padding: 0 20px;
         color: beige;
         text-decoration: none;
         font-weight: 500;
-        margin: 10px 0;
+        /* margin: 10px 0; */
+        display: flex;
+        align-items: center;
         transition: .3s;
     }
     
-    /* making the text chang color when hovring above it or if its active */
+    /* making the text chang color when hovring above link or if its active */
     .navbar a:hover,
     .navbar a.active{
         color: brown;
     }
-    
-   
 
+        /* this is what pops out when you click the menu button */
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(245, 245, 220, 0.521);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.329);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        
+    }
+    .sidebar li{
+        width: 100%;
+    }
+    .sidebar li:first-child{
+        margin-left: 70%;
+        margin-top: 7%;
+    }
+   
+    /* font color on the sidebar */
+    .sidebar a {
+        width: 100%;
+        color: black;
+    }
+
+    /* hiding the menu button on bigger screens */
+    .menu-Button{
+        display: none;
+    }
+
+
+    /* making the links and sidebar responsive */
+    @media(max-width: 800px){
+        .hideOnMobile{
+            display: none;
+        }
+        .menu-Button{
+            display: block;
+        }
+    }
         
     
 
