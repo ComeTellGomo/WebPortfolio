@@ -6,7 +6,7 @@
     }
     
     body{
-        background: darkolivegreen;
+        background: chocolate;
         color: beige;
         min-height: 100vh;
     }
@@ -16,9 +16,13 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 99%;
         padding: 20px 10%;
-        background: transparent;
+        background: #9b4922;
+        border: 2px solid #9b4922;
+        border-radius: 80px;
+        /* margin-top: 1%; */
+        margin: 1% 1% 1% 1%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -33,6 +37,7 @@
         text-decoration: none;
         font-weight: 600;
         margin: 10px 0;
+        
         
     }
 
@@ -83,7 +88,7 @@
         z-index: 999;
         background-color: rgba(245, 245, 220, 0.521);
         backdrop-filter: blur(10px);
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.329);
+        box-shadow: -300px 0px 400px rgba(0, 0, 0, 0.329);
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -130,7 +135,7 @@
         height: 100vh;
         display: flex;
         align-items: center;
-        padding: 0 10%;
+        padding: 0 10%;     
     }
     
     /* making sure that paragraph doesnt overlap */
@@ -143,6 +148,7 @@
         font-size: 56px;
         font-weight: 700;
         line-height: 1.2;
+        
     }
     
     /* information tech grad */
@@ -210,4 +216,23 @@
     .btn-box a:hover::before{
         width: 100%;
     
+    }
+
+    footer{
+        background: beige;
+        color: black;
+        position: bottom;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .footer-content{
+        font-size: 6px;
     }
