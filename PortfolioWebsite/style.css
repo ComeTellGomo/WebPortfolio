@@ -218,6 +218,17 @@
     
     }
 
+
+    .home-2ndSection{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 50%; 
+    }
+
+    
+
     footer{
         background: beige;
         color: black;
