@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family:sans-serif;
     }
+    html {
+        scroll-behavior: smooth;
+    }
+    
     
     body{
         background: chocolate;
@@ -79,7 +83,7 @@
     }
 
         /* this is what pops out when you click the menu button */
-    .sidebar{
+    .sidebar {
         position: fixed;
         top: 0;
         right: 0;
@@ -93,9 +97,16 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        
+        transition: transform 0.3s ease;
         
     }
+    
+    
+    /* Show sidebar */
+    .show-sidebar {
+        transform: translateX(0);
+    }
+    
     .sidebar li{
         width: 100%;
     }
@@ -127,6 +138,27 @@
     }
         
     
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures both sections take up the same height if they have similar content */
+    width: 100%; /* Ensures container takes up full width */
+}
+
+/* Section styling */
+.section {
+    flex: 1; /* Allows sections to take up equal space */
+    padding: 20px;
+    border: 1px solid #ddd; /* Example styling */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Example shadow */
+    background-color: #f9f9f9; /* Background color */
+}
+
+/* Make sure they look the same by applying the same styles */
+/* #home, #home-2ndSection {
+    /* Add any specific styling for both sections here */
 
 
 
@@ -208,7 +240,7 @@
         left: 0;
         width: 0;
         height: 100%;
-        background: goldenrod;
+        background: #ff3700;
         z-index: -1;
         transition: .5s;
     }
@@ -229,21 +261,36 @@
 
     
 
-    footer{
-        background: beige;
-        color: black;
-        position: bottom;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px 10%;
-        
+    
+    
+    
+    .social-content{
+    display: flex;
+    justify-content: start;
+    width: 245px;
+    height: 50px;
+    gap: 10px;
+    }
+    .social-content a{
+        text-decoration: none;
+        margin-right: 1px;
+        color: #ff3700; 
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: brown;
+        border: 2px solid brown;
+        font-size: 30px;
+        border-radius: 80px;
         align-items: center;
-        z-index: 100;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
     }
 
-    .footer-content{
-        font-size: 6px;
+    
+    .social-content a:hover {
+        color: #010a15; 
     }
