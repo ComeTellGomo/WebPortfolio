@@ -21,7 +21,7 @@
         top: 0;
         left: 0;
         width: 99%;
-        padding: 20px 10%;
+        padding: 30px 3%;
         background: #9b4922;
         border: 2px solid #9b4922;
         border-radius: 80px;
@@ -35,13 +35,31 @@
     
     
     /* styling my name */
-    .logo{
+    .logo {
         font-size: 25px;
-        color: beige;
+        color: transparent;
         text-decoration: none;
         font-weight: 600;
-        margin: 10px 0;       
+        margin-right: 5px 0;       
     }
+        .logo2 { 
+            border-radius: 500px;
+            position: fixed;
+            margin-right: 5px 0;   
+        width: 120px; 
+        height: 70px; 
+        background-image: url(../images/LogoGomolemo.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    @media (max-width: 768px) {
+        .logo2 {
+            width: 100px; /* Smaller width for mobile */
+        }
+    }
+    
+    
 
     .navbar{
         display: flex;
@@ -152,10 +170,31 @@
         align-items: center;
         padding: 0 10%;     
     }
+
+    .headshot {
+        width: 230px; /* Adjust width as desired */
+        height: 250px; /* Keep aspect ratio */
+        margin-left: 80px; /* Space between text and image */
+        border-radius: 10px;
+        background-image: url(../images/headshot.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
     
+    .headshot:hover{
+        width: 240px;
+        height: 260px;        
+        transition: .5s ease-in-out;
+        
+    }
+
     /* making sure that paragraph doesnt overlap */
     .home-content{
         max-width: 600px;
+        /* display: flex;
+        align-items: center; */
     }
     
     /* welcome text */
@@ -200,7 +239,7 @@
         height: 100%;
         background: brown;
         border: 2px solid brown;
-        border-radius: 8px;
+        border-radius: 18px;
         font-size: 26px;
         color: beige;
         text-decoration: none;
